@@ -60,4 +60,23 @@ public class MyPoint {
     public String toString() {
         return "(x=" + x +", y=" + y +")";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        MyPoint myPoint = (MyPoint) o;
+
+        if (x != myPoint.x) return false;
+        return y == myPoint.y;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + x;
+        result = 31 * result + y;
+        return result;
+    }
 }

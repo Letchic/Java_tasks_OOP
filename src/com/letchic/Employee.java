@@ -50,4 +50,27 @@ public class Employee {
     public String toString() {
         return "Employee[id="+id+", name="+firstname+", lastname="+lastname+", salary="+salary+"]";
     }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Employee employee = (Employee) o;
+
+        if (id != employee.id) return false;
+        if (salary != employee.salary) return false;
+        if (firstname != null ? !firstname.equals(employee.firstname) : employee.firstname != null) return false;
+        return lastname != null ? lastname.equals(employee.lastname) : employee.lastname == null;
+    }
+
+    @Override
+    public int hashCode() {
+        int result = 17;
+        result = 31 * result + id;
+        result = 31 * result + (firstname != null ? firstname.hashCode() : 0);
+        result = 31 * result + (lastname != null ? lastname.hashCode() : 0);
+        result = 31 * result + salary;
+        return result;
+    }
 }
