@@ -1,5 +1,10 @@
 package com.letchic;
 
+import com.letchic.book.Author;
+import com.letchic.book.Book;
+import com.letchic.shape.Circle;
+import com.letchic.shape.Rectangle;
+
 public class Main {
     public static void main(String[] args) {
         //Circle

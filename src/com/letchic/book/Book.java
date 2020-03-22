@@ -1,4 +1,4 @@
-package com.letchic;
+package com.letchic.book;
 
 import java.util.Arrays;
 import java.util.Objects;
@@ -67,7 +67,7 @@ public class Book {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Book book = (Book) o;
-        return Double.compare(book.price, price) == 0 &&
+        return Math.abs(book.price-price) <= 0.000001 &&
                 qty == book.qty &&
                 Objects.equals(name, book.name) &&
                 Arrays.equals(authors, book.authors);

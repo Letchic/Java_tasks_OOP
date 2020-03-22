@@ -1,4 +1,4 @@
-package com.letchic;
+package com.letchic.book;
 
 import java.util.Objects;
 

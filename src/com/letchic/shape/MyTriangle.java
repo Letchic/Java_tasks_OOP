@@ -1,4 +1,5 @@
-package com.letchic;
+package com.letchic.shape;
+
 public class MyTriangle {
     private MyPoint v1;
     private MyPoint v2;

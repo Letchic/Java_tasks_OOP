@@ -1,4 +1,4 @@
-package com.letchic;
+package com.letchic.shape;
 
 public class Rectangle {
     private float length = 1.0f;
@@ -40,8 +40,8 @@ public class Rectangle {
 
         Rectangle rectangle = (Rectangle) o;
 
-        if (Float.compare(rectangle.length, length) != 0) return false;
-        return Float.compare(rectangle.width, width) == 0;
+        if (Math.abs(rectangle.length - length) > 0.00001) return false;
+        return Math.abs(rectangle.width - width) <= 0.00001;
     }
 
     @Override

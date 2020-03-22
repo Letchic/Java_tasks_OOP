@@ -1,4 +1,4 @@
-package com.letchic;
+package com.letchic.shape;
 
 public class MyPoint {
     private int x=0;

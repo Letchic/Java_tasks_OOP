@@ -1,4 +1,4 @@
-package com.letchic;
+package com.letchic.shape;
 
 public class Circle {
     private double radius = 1.0;
@@ -43,7 +43,7 @@ public class Circle {
 
         Circle circle = (Circle) o;
 
-        if (Double.compare(circle.radius, radius) != 0) return false;
+        if (Math.abs(circle.radius - radius) > 0.000001) return false;
         return color.equals(circle.color);
     }
 
